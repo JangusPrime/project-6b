@@ -92,15 +92,15 @@ jobs:
 
           --name AllowJenkins \ 
 
-          --protocol tcp \ 
-
           --priority 1000 \ 
+
+          --protocol Tcp \ 
 
           --destination-port-ranges 8080 \ 
 
-          --access allow \ 
+          --access Allow \ 
 
-          --direction inbound \ 
+          --direction Inbound \ 
 
           --source-address-prefixes '*' \ 
 
@@ -116,15 +116,15 @@ jobs:
 
           --name AllowSSH \ 
 
-          --protocol tcp \ 
-
           --priority 1001 \ 
+
+          --protocol Tcp \ 
 
           --destination-port-ranges 22 \ 
 
-          --access allow \ 
+          --access Allow \ 
 
-          --direction inbound \ 
+          --direction Inbound \ 
 
           --source-address-prefixes '*' \ 
 
@@ -320,7 +320,7 @@ jobs:
 
  
 
-     # Step 13: Install Jenkins on the VM (Skip if already installed) 
+    # Step 13: Install Jenkins on the VM (Skip if already installed) 
 
     - name: Install Jenkins on the VM 
 
